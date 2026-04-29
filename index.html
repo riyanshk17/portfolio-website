@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my protfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section id="home">
+<div class="front-part">
+
+<div class="navbar">
+<div class="protfolio-parent">
+<h2 class="protfolio">Portfolio</h2>
+</div>
+
+<div class="elements-parent">
+<div class="menu-icon" id="menu-icon">☰</div>
+
+<ul id="nav-components">
+<li><a href="#home">home</a></li>
+<li><a href="#about">about</a></li>
+<li><a href="#contact">contact</a></li>
+<li id="talk"><a href="#">let's talk</a></li>
+</ul>
+
+</div>
+</div>
+
+<div class="intro-box">
+<h4 class="intro-text">
+Hello, my name is <br>
+<div id="name">Riyansh Malviya</div>
+And I'm a <div id="java">Java Developer...</div>
+</h4>
+</div>
+
+<div id="hire-box">
+<button>Hire me</button>
+</div>
+
+</div>
+</section>
+
+
+<section class="about" id="about">
+
+<h1 class="title">About me</h1>
+<p class="subtitle">— who i am —</p>
+
+<div class="about-container">
+
+<div class="about-img">
+<img src="myimg.jpg">
+</div>
+
+<div class="about-content">
+<h2>I'm Riyansh and I'm a <span>Java Developer</span></h2>
+<p>
+I'm familiar with Java ,Spring-boot, html ,CSS & JavaScript & Bootstrap.
+currently working on DSA...
+</p>
+
+<a href="CV_2025021719585787.pdf" download class="btn">Download CV</a>
+</div>
+
+</div>
+</section>
+
+
+<section class="skills">
+
+<h1 class="skills-title">My Expertise</h1>
+<p class="skills-subtitle">— what I can do —</p>
+
+<div class="skills-container">
+
+<div class="skills-left">
+<h2>Turning ideas into reality</h2>
+<p>I enjoy building responsive and user-friendly websites.</p>
+
+<div class="skill-cards">
+<div class="card">App Development</div>
+<div class="card">Logic building</div>
+<div class="card">Web Design</div>
+</div>
+
+<button class="btn">Explore More</button>
+</div>
+
+<div class="skills-right">
+
+<div class="bar">
+<div class="info"><span>HTML</span><span>92%</span></div>
+<div class="line html"></div>
+</div>
+
+<div class="bar">
+<div class="info"><span>CSS</span><span>85%</span></div>
+<div class="line css"></div>
+</div>
+
+<div class="bar">
+<div class="info"><span>JavaScript</span><span>40%</span></div>
+<div class="line js"></div>
+</div>
+
+<div class="bar">
+<div class="info"><span>Java</span><span>60%</span></div>
+<div class="line react"></div>
+</div>
+
+</div>
+
+</div>
+</section id= "contact">
+
+
+<section class="contact" id="contact">
+
+<h1>Contact Me</h1>
+<p class="sub">Feel free to reach out</p>
+
+<div class="contact-box">
+
+<div class="contact-info">
+<p><strong>Name:</strong> Riyansh Malviya</p>
+<p><strong>Location:</strong> Bhopal, India</p>
+<p><strong>Email:</strong> malviyariyansh11@gmail.com</p>
+</div>
+
+<form class="contact-form">
+
+<input type="text" name="user_name" placeholder="Your Name" required>
+
+<input type="email" name="user_email" placeholder="Your Email" required>
+
+<textarea name="message" placeholder="Your Message" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+</div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("8CqFvhTfI6dh9gInW"); // public key sahi hai
+})();
+
+document.querySelector(".contact-form")
+.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_r03zj76",      
+    "template_q36atuf",    
+    this
+  )
+  .then(function() {
+    alert("Message Sent ✅");
+  }, function(error) {
+    alert("Error ❌ " + error.text);
+  });
+});
+</script>
+</body>
+</html>
